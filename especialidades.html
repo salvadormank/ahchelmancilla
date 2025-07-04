@@ -1,0 +1,1032 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Especialidades Dr. Ahchel Mancilla Hernández - Lesiones deportivas, fracturas, artroscopía, cirugía de columna y medicina deportiva. Tratamientos especializados en traumatología.">
+    <meta name="keywords" content="especialidades traumatología, lesiones deportivas, fracturas, artroscopía, cirugía columna, Dr Ahchel Mancilla">
+    <title>Especialidades - Dr. Ahchel Mancilla Hernández | Traumatólogo Especialista</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a5568;
+            --secondary-color: #2d3748;
+            --accent-color: #718096;
+            --light-bg: #f7fafc;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+            --medical-green: #68d391;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--light-bg);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+        
+        /* Header */
+        .header-top {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        
+        .header-top a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .header-top i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--text-dark) !important;
+            margin: 0 15px;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(45,55,72,0.85), rgba(45,55,72,0.85)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0 60px;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Specialties Overview */
+        .specialties-overview {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Specialty Cards */
+        .specialty-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .specialty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .specialty-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .specialty-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.8;
+        }
+        
+        .specialty-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: white;
+            z-index: 2;
+        }
+        
+        .specialty-content {
+            padding: 30px;
+        }
+        
+        .specialty-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .specialty-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .specialty-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .specialty-features li {
+            padding: 5px 0;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+        
+        .specialty-features li i {
+            color: var(--medical-green);
+            margin-right: 10px;
+            width: 15px;
+        }
+        
+        .btn-specialty {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-specialty:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Detailed Specialties */
+        .detailed-specialties {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .specialty-detail {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .specialty-detail h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .specialty-detail h3 i {
+            margin-right: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .specialty-detail .description {
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        .specialty-detail .treatments {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        
+        .specialty-detail .treatments h5 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .treatment-item {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .treatment-item h6 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .treatment-item p {
+            color: var(--text-light);
+            font-size: 13px;
+            margin: 0;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--secondary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--medical-green);
+            margin-bottom: 10px;
+            font-family: 'Roboto Slab', serif;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .cta-content p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .btn-primary-custom {
+            background: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+            padding: 12px 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: var(--secondary-color);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer h5 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer p, .footer li {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .specialty-content {
+                padding: 20px;
+            }
+            
+            .specialty-detail {
+                padding: 25px;
+            }
+            
+            .treatments-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-phone"></i><a href="tel:+525555123456">+52 55 5512 3456</a>
+                    <span class="ms-3"><i class="fas fa-envelope"></i><a href="mailto:contacto@drahchelmancilla.com">contacto@drahchelmancilla.com</a></span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <i class="fas fa-clock"></i>Horarios: Lun-Vie 9:00-18:00, Sáb 9:00-14:00
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Dr. Ahchel Mancilla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="especialidades.html">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestras Especialidades</h1>
+            <p>Ofrecemos un amplio rango de especialidades en traumatología y ortopedia, utilizando las técnicas más avanzadas y un enfoque personalizado para cada paciente.</p>
+        </div>
+    </section>
+
+    <!-- Specialties Overview -->
+    <section class="specialties-overview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Áreas de Especialización</h2>
+                <p>Cada especialidad está respaldada por años de experiencia, formación continua y el uso de tecnología de vanguardia para garantizar los mejores resultados.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="specialty-card">
+                        <div class="specialty-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="specialty-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                        </div>
+                        <div class="specialty-content">
+                            <h3>Medicina Deportiva</h3>
+                            <p>Especialización en lesiones deportivas, prevención y rehabilitación para atletas de todos los niveles.</p>
+                            <ul class="specialty-features">
+                                <li><i class="fas fa-check"></i>Lesiones musculares y tendinosas</li>
+                                <li><i class="fas fa-check"></i>Rehabilitación deportiva</li>
+                                <li><i class="fas fa-check"></i>Prevención de lesiones</li>
+                                <li><i class="fas fa-check"></i>Evaluación biomecánica</li>
+                            </ul>
+                            <a href="#medicina-deportiva" class="btn-specialty">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="specialty-card">
+                        <div class="specialty-image" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="specialty-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                        </div>
+                        <div class="specialty-content">
+                            <h3>Artroscopía</h3>
+                            <p>Cirugía mínimamente invasiva para articulaciones, especialmente rodilla, hombro y tobillo.</p>
+                            <ul class="specialty-features">
+                                <li><i class="fas fa-check"></i>Artroscopía de rodilla</li>
+                                <li><i class="fas fa-check"></i>Artroscopía de hombro</li>
+                                <li><i class="fas fa-check"></i>Reparación de meniscos</li>
+                                <li><i class="fas fa-check"></i>Reconstrucción ligamentaria</li>
+                            </ul>
+                            <a href="#artroscopia" class="btn-specialty">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="specialty-card">
+                        <div class="specialty-image" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="specialty-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                        </div>
+                        <div class="specialty-content">
+                            <h3>Tratamiento de Fracturas</h3>
+                            <p>Manejo integral de fracturas simples y complejas con técnicas avanzadas de fijación.</p>
+                            <ul class="specialty-features">
+                                <li><i class="fas fa-check"></i>Fracturas traumáticas</li>
+                                <li><i class="fas fa-check"></i>Fracturas patológicas</li>
+                                <li><i class="fas fa-check"></i>Fijación interna y externa</li>
+                                <li><i class="fas fa-check"></i>Pseudoartrosis</li>
+                            </ul>
+                            <a href="#fracturas" class="btn-specialty">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="specialty-card">
+                        <div class="specialty-image" style="background-image: url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="specialty-icon">
+                                <i class="fas fa-spine"></i>
+                            </div>
+                        </div>
+                        <div class="specialty-content">
+                            <h3>Cirugía de Columna</h3>
+                            <p>Tratamiento especializado de patologías de la columna vertebral con técnicas mínimamente invasivas.</p>
+                            <ul class="specialty-features">
+                                <li><i class="fas fa-check"></i>Hernias discales</li>
+                                <li><i class="fas fa-check"></i>Estenosis espinal</li>
+                                <li><i class="fas fa-check"></i>Escoliosis</li>
+                                <li><i class="fas fa-check"></i>Fracturas vertebrales</li>
+                            </ul>
+                            <a href="#columna" class="btn-specialty">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="specialty-card">
+                        <div class="specialty-image" style="background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="specialty-icon">
+                                <i class="fas fa-crutch"></i>
+                            </div>
+                        </div>
+                        <div class="specialty-content">
+                            <h3>Ortopedia Pediátrica</h3>
+                            <p>Especialización en problemas ortopédicos en niños y adolescentes con enfoque en el crecimiento.</p>
+                            <ul class="specialty-features">
+                                <li><i class="fas fa-check"></i>Deformidades congénitas</li>
+                                <li><i class="fas fa-check"></i>Displasia de cadera</li>
+                                <li><i class="fas fa-check"></i>Pie equinovaro</li>
+                                <li><i class="fas fa-check"></i>Fracturas pediátricas</li>
+                            </ul>
+                            <a href="#pediatrica" class="btn-specialty">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="specialty-card">
+                        <div class="specialty-image" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                            <div class="specialty-icon">
+                                <i class="fas fa-hand-paper"></i>
+                            </div>
+                        </div>
+                        <div class="specialty-content">
+                            <h3>Cirugía de Mano</h3>
+                            <p>Tratamiento especializado de lesiones y patologías de mano, muñeca y extremidad superior.</p>
+                            <ul class="specialty-features">
+                                <li><i class="fas fa-check"></i>Síndrome del túnel carpiano</li>
+                                <li><i class="fas fa-check"></i>Fracturas de mano</li>
+                                <li><i class="fas fa-check"></i>Lesiones tendinosas</li>
+                                <li><i class="fas fa-check"></i>Microcirugía reconstructiva</li>
+                            </ul>
+                            <a href="#mano" class="btn-specialty">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">3000+</div>
+                        <div class="stat-label">Cirugías Realizadas</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Tasa de Éxito</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">Pacientes Atendidos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Specialties -->
+    <section class="detailed-specialties">
+        <div class="container">
+            <div class="section-title">
+                <h2>Información Detallada</h2>
+                <p>Conoce en profundidad cada una de nuestras especialidades y los tratamientos que ofrecemos.</p>
+            </div>
+            
+            <!-- Medicina Deportiva -->
+            <div class="specialty-detail" id="medicina-deportiva">
+                <h3><i class="fas fa-running"></i>Medicina Deportiva</h3>
+                <p class="description">La medicina deportiva se enfoca en la prevención, diagnóstico y tratamiento de lesiones relacionadas con la actividad física y el deporte. Nuestro enfoque integral combina técnicas avanzadas de diagnóstico, tratamiento conservador y quirúrgico cuando es necesario, así como programas de rehabilitación especializados para el retorno seguro al deporte.</p>
+                
+                <div class="treatments">
+                    <h5>Tratamientos y Procedimientos</h5>
+                    <div class="treatments-grid">
+                        <div class="treatment-item">
+                            <h6>Artroscopía de Rodilla</h6>
+                            <p>Reparación de meniscos, reconstrucción ligamentaria</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Artroscopía de Hombro</h6>
+                            <p>Reparación del manguito rotador, lesiones del labrum</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Artroscopía de Tobillo</h6>
+                            <p>Limpieza articular, reparación de cartílago</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Artroscopía de Cadera</h6>
+                            <p>Tratamiento del pinzamiento femoroacetabular</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fracturas -->
+            <div class="specialty-detail" id="fracturas">
+                <h3><i class="fas fa-bone"></i>Tratamiento de Fracturas</h3>
+                <p class="description">El tratamiento de fracturas requiere un enfoque especializado que considera la ubicación, tipo de fractura, edad del paciente y nivel de actividad. Utilizamos las técnicas más avanzadas de reducción y fijación, incluyendo materiales de última generación para garantizar una consolidación óptima y el retorno a las actividades normales.</p>
+                
+                <div class="treatments">
+                    <h5>Tipos de Fracturas y Tratamientos</h5>
+                    <div class="treatments-grid">
+                        <div class="treatment-item">
+                            <h6>Fracturas Complejas</h6>
+                            <p>Fracturas multifragmentarias y articulares</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Fijación Interna</h6>
+                            <p>Placas, tornillos y clavos endomedulares</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Fijación Externa</h6>
+                            <p>Fijadores externos para fracturas abiertas</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Pseudoartrosis</h6>
+                            <p>Tratamiento de fracturas que no consolidan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Columna -->
+            <div class="specialty-detail" id="columna">
+                <h3><i class="fas fa-spine"></i>Cirugía de Columna</h3>
+                <p class="description">Las patologías de la columna vertebral pueden causar dolor significativo e incapacidad funcional. Nuestro enfoque incluye tanto tratamientos conservadores como procedimientos quirúrgicos mínimamente invasivos, priorizando siempre la preservación de la función y la movilidad del paciente.</p>
+                
+                <div class="treatments">
+                    <h5>Patologías y Procedimientos</h5>
+                    <div class="treatments-grid">
+                        <div class="treatment-item">
+                            <h6>Hernias Discales</h6>
+                            <p>Microdiscectomía y nucleoplastía</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Estenosis Espinal</h6>
+                            <p>Laminectomía y foraminotomía</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Fusión Vertebral</h6>
+                            <p>Artrodesis para inestabilidad</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Fracturas Vertebrales</h6>
+                            <p>Vertebroplastía y cifoplastía</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ortopedia Pediátrica -->
+            <div class="specialty-detail" id="pediatrica">
+                <h3><i class="fas fa-crutch"></i>Ortopedia Pediátrica</h3>
+                <p class="description">La ortopedia pediátrica requiere conocimientos especializados sobre el crecimiento y desarrollo del sistema musculoesquelético en niños. Nuestro enfoque considera las características únicas del esqueleto en crecimiento y las necesidades específicas de cada etapa del desarrollo.</p>
+                
+                <div class="treatments">
+                    <h5>Condiciones Pediátricas</h5>
+                    <div class="treatments-grid">
+                        <div class="treatment-item">
+                            <h6>Displasia de Cadera</h6>
+                            <p>Diagnóstico temprano y tratamiento conservador</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Pie Equinovaro</h6>
+                            <p>Método Ponseti y corrección quirúrgica</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Escoliosis</h6>
+                            <p>Monitoreo y tratamiento según severidad</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Fracturas Pediátricas</h6>
+                            <p>Tratamiento específico para huesos en crecimiento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cirugía de Mano -->
+            <div class="specialty-detail" id="mano">
+                <h3><i class="fas fa-hand-paper"></i>Cirugía de Mano</h3>
+                <p class="description">La cirugía de mano es una subespecialidad que requiere precisión y conocimiento detallado de la anatomía compleja de la extremidad superior. Tratamos desde lesiones traumáticas hasta condiciones degenerativas, siempre con el objetivo de restaurar la función y minimizar la discapacidad.</p>
+                
+                <div class="treatments">
+                    <h5>Procedimientos Especializados</h5>
+                    <div class="treatments-grid">
+                        <div class="treatment-item">
+                            <h6>Túnel Carpiano</h6>
+                            <p>Liberación endoscópica y abierta</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Fracturas de Mano</h6>
+                            <p>Fijación interna de metacarpianos y falanges</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Lesiones Tendinosas</h6>
+                            <p>Reparación de tendones flexores y extensores</p>
+                        </div>
+                        <div class="treatment-item">
+                            <h6>Microcirugía</h6>
+                            <p>Reimplantación y transferencias tisulares</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h3>¿Necesitas una Consulta Especializada?</h3>
+                <p>No esperes más para recibir el tratamiento que necesitas. Agenda tu consulta y permite que nuestro equipo especializado evalúe tu caso con la atención personalizada que mereces.</p>
+                <a href="contacto.html" class="btn-primary-custom">
+                    <i class="fas fa-calendar-alt me-2"></i>Agendar Consulta
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Dr. Ahchel Mancilla</h5>
+                    <p>Especialista en Traumatología y Ortopedia comprometido con brindar la mejor atención médica a mis pacientes. Utilizando tecnología de vanguardia y técnicas mínimamente invasivas.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Servicios</h5>
+                    <ul>
+                        <li><a href="servicios.html">Consulta</a></li>
+                        <li><a href="servicios.html">Cirugía</a></li>
+                        <li><a href="servicios.html">Medicina Deportiva</a></li>
+                        <li><a href="servicios.html">Rehabilitación</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Especialidades</h5>
+                    <ul>
+                        <li><a href="#medicina-deportiva">Lesiones Deportivas</a></li>
+                        <li><a href="#fracturas">Fracturas</a></li>
+                        <li><a href="#artroscopia">Artroscopía</a></li>
+                        <li><a href="#columna">Cirugía de Columna</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Av. Revolución 1234<br>Ciudad de México</p>
+                    <p><i class="fas fa-phone me-2"></i>+52 55 5512 3456</p>
+                    <p><i class="fas fa-envelope me-2"></i>contacto@drahchelmancilla.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Ahchel Mancilla Hernández. Todos los derechos reservados. | Diseño web médico profesional</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe specialty cards
+        document.querySelectorAll('.specialty-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Observe specialty details
+        document.querySelectorAll('.specialty-detail').forEach(detail => {
+            detail.style.opacity = '0';
+            detail.style.transform = 'translateY(30px)';
+            detail.style.transition = 'all 0.6s ease';
+            observer.observe(detail);
+        });
+
+        // Counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/\D/g, ''));
+                const suffix = counter.textContent.replace(/\d/g, '');
+                let current = 0;
+                const increment = target / 50;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current) + suffix;
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + suffix;
+                    }
+                };
+                
+                updateCounter();
+            });
+        };
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Add hover effects to treatment items
+        document.querySelectorAll('.treatment-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Dr. Ahchel Mancilla Hernández - Traumatólogo",
+        "description": "Especialidades en traumatología y ortopedia: medicina deportiva, artroscopía, fracturas, cirugía de columna",
+        "url": "https://www.drahchelmancilla.com/especialidades",
+        "medicalSpecialty": [
+            "Medicina Deportiva",
+            "Artroscopía",
+            "Tratamiento de Fracturas",
+            "Cirugía de Columna",
+            "Ortopedia Pediátrica",
+            "Cirugía de Mano"
+        ],
+        "physician": {
+            "@type": "Physician",
+            "name": "Dr. Ahchel Mancilla Hernández",
+            "medicalSpecialty": "Traumatología y Ortopedia"
+        }
+    }
+    </script>
+</body>
+</html>

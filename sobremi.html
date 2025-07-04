@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce al Dr. Ahchel Mancilla Hernández - Traumatólogo especialista con más de 15 años de experiencia en cirugía ortopédica, medicina deportiva y tratamiento de fracturas.">
+    <meta name="keywords" content="Dr Ahchel Mancilla, traumatólogo, ortopedia, experiencia médica, formación académica, certificaciones">
+    <meta name="author" content="Dr. Ahchel Mancilla Hernández - Traumatólogo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sobre Mí - Dr. Ahchel Mancilla Hernández | Traumatólogo Especialista">
+    <meta property="og:description" content="Conoce la formación, experiencia y filosofía médica del Dr. Ahchel Mancilla Hernández, especialista en traumatología y ortopedia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.drahchelmancilla.com/sobre-mi">
+    
+    <title>Sobre Mí - Dr. Ahchel Mancilla Hernández | Traumatólogo Especialista</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a5568;
+            --secondary-color: #2d3748;
+            --accent-color: #718096;
+            --light-bg: #f7fafc;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+            --medical-green: #68d391;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+        
+        /* Header */
+        .header-top {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        
+        .header-top a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .header-top i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--text-dark) !important;
+            margin: 0 15px;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(45,55,72,0.85), rgba(45,55,72,0.85)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+        
+        .doctor-profile-detailed {
+            background: white;
+            margin-bottom: 60px;
+        }
+        
+        .profile-image-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .profile-image-section img {
+            max-width: 350px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .profile-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .profile-content .subtitle {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .profile-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        /* Education & Experience */
+        .education-experience {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--secondary-color);
+            border: 4px solid var(--accent-color);
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .timeline-date {
+            background: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-content h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content .institution {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .timeline-content p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Philosophy & Approach */
+        .philosophy {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .philosophy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .philosophy-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .quote-text {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .quote-text::before,
+        .quote-text::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent-color);
+            font-family: serif;
+        }
+        
+        .philosophy-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .philosophy-point {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .philosophy-point i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-point h5 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .philosophy-point p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Statistics */
+        .statistics {
+            padding: 80px 0;
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer h5 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer p, .footer li {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+            
+            .profile-content h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-phone"></i><a href="tel:+525555123456">+52 55 5512 3456</a>
+                    <span class="ms-3"><i class="fas fa-envelope"></i><a href="mailto:contacto@drahchelmancilla.com">contacto@drahchelmancilla.com</a></span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <i class="fas fa-clock"></i>Horarios: Lun-Vie 9:00-18:00, Sáb 9:00-14:00
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Dr. Ahchel Mancilla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sobremi.html">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="especialidades.html">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Sobre Mí</h1>
+            <p>Conoce mi formación, experiencia y filosofía médica en el campo de la traumatología y ortopedia</p>
+        </div>
+    </section>
+
+    <!-- Doctor Profile -->
+    <section class="main-content">
+        <div class="container">
+            <div class="doctor-profile-detailed">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="profile-image-section">
+                            <img src="ahchel.jpeg" alt="Dr. Ahchel Mancilla Hernández" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="profile-content">
+                            <h2>Dr. Ahchel Mancilla Hernández</h2>
+                            <p class="subtitle">Especialista en Traumatología y Ortopedia</p>
+                            
+                            <p class="profile-text">
+                                Soy médico especialista en traumatología y ortopedia con más de 15 años de experiencia dedicados al cuidado integral de mis pacientes. Mi pasión por la medicina ortopédica comenzó durante mis estudios de medicina, donde descubrí la fascinante complejidad del sistema musculoesquelético y su impacto directo en la calidad de vida de las personas.
+                            </p>
+                            
+                            <p class="profile-text">
+                                A lo largo de mi carrera, he tenido el privilegio de especializarme en áreas específicas como la medicina deportiva, cirugía artroscópica y el tratamiento de fracturas complejas. Mi formación continua me ha llevado a dominar técnicas quirúrgicas mínimamente invasivas que permiten una recuperación más rápida y efectiva para mis pacientes.
+                            </p>
+                            
+                            <p class="profile-text">
+                                Mi enfoque médico se basa en tres pilares fundamentales: la medicina basada en evidencia, el trato humano y personalizado, y la implementación de tecnología de vanguardia. Creo firmemente que cada paciente es único y merece un plan de tratamiento diseñado específicamente para sus necesidades y objetivos de vida.
+                            </p>
+                            
+                            <p class="profile-text">
+                                Además de mi práctica clínica, me mantengo activamente involucrado en la investigación médica y la educación continua. Participo regularmente en congresos nacionales e internacionales, y mantengo colaboraciones con instituciones académicas para estar siempre al día con los últimos avances en traumatología y ortopedia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Timeline -->
+    <section class="education-experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Formación Académica y Experiencia</h2>
+                <p>Un recorrido por mi trayectoria educativa y profesional en el campo de la medicina ortopédica</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2008 - 2014</div>
+                        <h4>Licenciatura en Medicina</h4>
+                        <div class="institution">Universidad Nacional Autónoma de México (UNAM)</div>
+                        <p>Formación integral en ciencias médicas con mención honorífica. Enfoque especial en anatomía, fisiología y patología del sistema musculoesquelético.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2015 - 2019</div>
+                        <h4>Especialidad en Traumatología y Ortopedia</h4>
+                        <div class="institution">Hospital General de México "Dr. Eduardo Liceaga"</div>
+                        <p>Residencia médica de alta especialidad con rotaciones en cirugía de trauma, ortopedia pediátrica, cirugía de columna y medicina deportiva.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2020</div>
+                        <h4>Fellowship en Medicina Deportiva</h4>
+                        <div class="institution">Instituto Nacional de Rehabilitación</div>
+                        <p>Subespecialización en lesiones deportivas, artroscopía avanzada y técnicas de rehabilitación para atletas de alto rendimiento.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020</div>
+                        <h4>Certificación del Consejo Mexicano</h4>
+                        <div class="institution">Consejo Mexicano de Ortopedia y Traumatología</div>
+                        <p>Certificación oficial como especialista en traumatología y ortopedia, con validación de competencias y conocimientos especializados.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021</div>
+                        <h4>Curso de Artroscopía Avanzada</h4>
+                        <div class="institution">Hospital de Especialidades CMN Siglo XXI</div>
+                        <p>Entrenamiento especializado en técnicas artroscópicas de hombro, rodilla y tobillo, incluyendo procedimientos de reconstrucción ligamentaria.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - Presente</div>
+                        <h4>Práctica Privada</h4>
+                        <div class="institution">Consulta Especializada en Traumatología</div>
+                        <p>Establecimiento de práctica privada enfocada en medicina deportiva, cirugía artroscópica y tratamiento integral de lesiones musculoesqueléticas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy & Approach -->
+    <section class="philosophy">
+        <div class="container">
+            <div class="philosophy-content">
+                <h2>Mi Filosofía Médica</h2>
+                <div class="quote-text">
+                    Creo que la medicina verdaderamente efectiva combina la excelencia técnica con la compasión humana, tratando no solo la lesión, sino a la persona en su totalidad.
+                </div>
+                
+                <div class="philosophy-points">
+                    <div class="philosophy-point">
+                        <i class="fas fa-heart"></i>
+                        <h5>Atención Personalizada</h5>
+                        <p>Cada paciente recibe un plan de tratamiento único, diseñado específicamente para sus necesidades, estilo de vida y objetivos de recuperación.</p>
+                    </div>
+                    
+                    <div class="philosophy-point">
+                        <i class="fas fa-microscope"></i>
+                        <h5>Medicina Basada en Evidencia</h5>
+                        <p>Todas mis decisiones terapéuticas se fundamentan en la investigación científica más reciente y las mejores prácticas médicas internacionales.</p>
+                    </div>
+                    
+                    <div class="philosophy-point">
+                        <i class="fas fa-users"></i>
+                        <h5>Trabajo en Equipo</h5>
+                        <p>Colaboro estrechamente con fisioterapeutas, nutriólogos y otros especialistas para brindar un cuidado integral y multidisciplinario.</p>
+                    </div>
+                    
+                    <div class="philosophy-point">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h5>Educación Continua</h5>
+                        <p>Me mantengo constantemente actualizado con los últimos avances tecnológicos y técnicas quirúrgicas en traumatología y ortopedia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Años de Experiencia</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">5,000+</span>
+                    <span class="stat-label">Pacientes Tratados</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">1,200+</span>
+                    <span class="stat-label">Cirugías Realizadas</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Tasa de Éxito</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Certificaciones</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Dr. Ahchel Mancilla</h5>
+                    <p>Especialista en Traumatología y Ortopedia comprometido con brindar la mejor atención médica a mis pacientes. Utilizando tecnología de vanguardia y técnicas mínimamente invasivas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Servicios</h5>
+                    <ul>
+                        <li><a href="servicios.html">Consulta</a></li>
+                        <li><a href="servicios.html">Cirugía</a></li>
+                        <li><a href="servicios.html">Medicina Deportiva</a></li>
+                        <li><a href="servicios.html">Rehabilitación</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Especialidades</h5>
+                    <ul>
+                        <li><a href="especialidades.html">Lesiones Deportivas</a></li>
+                        <li><a href="especialidades.html">Fracturas</a></li>
+                        <li><a href="especialidades.html">Artroscopía</a></li>
+                        <li><a href="especialidades.html">Cirugía de Columna</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Av. Revolución 1234<br>Ciudad de México</p>
+                    <p><i class="fas fa-phone me-2"></i>+52 55 5512 3456</p>
+                    <p><i class="fas fa-envelope me-2"></i>contacto@drahchelmancilla.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Ahchel Mancilla Hernández. Todos los derechos reservados. | Diseño web médico profesional</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Timeline animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items for animation
+        document.querySelectorAll('.timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Philosophy points animation
+        document.querySelectorAll('.philosophy-point').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Counter animation for statistics
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start).toLocaleString();
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target.toLocaleString();
+                }
+            }
+            updateCounter();
+        }
+
+        // Observe statistics section
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(statNumber => {
+                        const text = statNumber.textContent;
+                        let target = parseInt(text.replace(/[^0-9]/g, ''));
+                        
+                        if (text.includes('%')) {
+                            statNumber.textContent = '0%';
+                            setTimeout(() => {
+                                animateCounter({
+                                    textContent: target + '%'
+                                }, target);
+                                statNumber.textContent = target + '%';
+                            }, 200);
+                        } else if (text.includes('+')) {
+                            statNumber.textContent = '0+';
+                            setTimeout(() => {
+                                let current = 0;
+                                const interval = setInterval(() => {
+                                    current += Math.ceil(target / 100);
+                                    if (current >= target) {
+                                        current = target;
+                                        clearInterval(interval);
+                                    }
+                                    statNumber.textContent = current.toLocaleString() + '+';
+                                }, 20);
+                            }, 200);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.statistics');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    </script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dr. Ahchel Mancilla Hernández",
+        "jobTitle": "Traumatólogo y Ortopedista",
+        "description": "Especialista en traumatología y ortopedia con más de 15 años de experiencia en cirugía ortopédica, medicina deportiva y tratamiento de fracturas",
+        "url": "https://www.drahchelmancilla.com/sobre-mi",
+        "image": "https://www.drahchelmancilla.com/images/dr-ahchel-mancilla.jpg",
+        "telephone": "+525555123456",
+        "email": "contacto@drahchelmancilla.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Revolución 1234, Col. San Ángel",
+            "addressLocality": "Ciudad de México",
+            "addressRegion": "CDMX",
+            "postalCode": "01000",
+            "addressCountry": "MX"
+        },
+        "alumniOf": [
+            {
+                "@type": "EducationalOrganization",
+                "name": "Universidad Nacional Autónoma de México",
+                "description": "Licenciatura en Medicina"
+            },
+            {
+                "@type": "EducationalOrganization", 
+                "name": "Hospital General de México",
+                "description": "Especialidad en Traumatología y Ortopedia"
+            },
+            {
+                "@type": "EducationalOrganization",
+                "name": "Instituto Nacional de Rehabilitación",
+                "description": "Fellowship en Medicina Deportiva"
+            }
+        ],
+        "memberOf": {
+            "@type": "Organization",
+            "name": "Consejo Mexicano de Ortopedia y Traumatología"
+        },
+        "knowsAbout": [
+            "Traumatología",
+            "Ortopedia", 
+            "Medicina Deportiva",
+            "Cirugía Artroscópica",
+            "Tratamiento de Fracturas",
+            "Rehabilitación Ortopédica"
+        ]
+    }
+    </script>
+</body>
+</html>

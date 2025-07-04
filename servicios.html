@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios especializados del Dr. Ahchel Mancilla Hernández - Consultas, cirugía ortopédica, medicina deportiva, rehabilitación y estudios diagnósticos en Ciudad de México.">
+    <meta name="keywords" content="servicios traumatólogo, consulta ortopédica, cirugía artroscópica, medicina deportiva, rehabilitación, estudios diagnósticos">
+    <meta name="author" content="Dr. Ahchel Mancilla Hernández - Traumatólogo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Servicios Médicos - Dr. Ahchel Mancilla Hernández | Traumatólogo">
+    <meta property="og:description" content="Servicios especializados en traumatología y ortopedia: consultas, cirugía, medicina deportiva y rehabilitación integral.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.drahchelmancilla.com/servicios">
+    
+    <title>Servicios Médicos - Dr. Ahchel Mancilla Hernández | Traumatólogo Especialista</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a5568;
+            --secondary-color: #2d3748;
+            --accent-color: #718096;
+            --light-bg: #f7fafc;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+            --medical-green: #68d391;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+        
+        /* Header */
+        .header-top {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        
+        .header-top a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .header-top i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--text-dark) !important;
+            margin: 0 15px;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(45,55,72,0.85), rgba(45,55,72,0.85)), url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* Services Overview */
+        .services-overview {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Services */
+        .main-services {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            height: 100%;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-icon {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .service-icon i {
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .service-features li {
+            color: var(--text-dark);
+            font-size: 14px;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            color: var(--medical-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .service-price {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .price-text {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .btn-service {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .btn-service:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(45,55,72,0.3);
+        }
+        
+        /* Detailed Services */
+        .detailed-services {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .service-detail {
+            background: var(--light-bg);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .service-detail h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-detail h3 i {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+        
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .service-description p {
+            color: var(--text-dark);
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .service-benefits {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .service-benefits h5 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .service-benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-benefits li {
+            color: var(--text-dark);
+            font-size: 14px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .service-benefits li::before {
+            content: '→';
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Process Section */
+        .process-section {
+            padding: 80px 0;
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            color: white;
+        }
+        
+        .process-step h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .process-step p {
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-cta {
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-cta-primary {
+            background: var(--secondary-color);
+            color: white;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .btn-cta-primary:hover {
+            background: transparent;
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(45,55,72,0.2);
+        }
+        
+        .btn-cta-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-cta-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(74,85,104,0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer h5 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer p, .footer li {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .service-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .navbar-nav .nav-link {
+                margin: 5px 0;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-phone"></i><a href="tel:+525555123456">+52 55 5512 3456</a>
+                    <span class="ms-3"><i class="fas fa-envelope"></i><a href="mailto:contacto@drahchelmancilla.com">contacto@drahchelmancilla.com</a></span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <i class="fas fa-clock"></i>Horarios: Lun-Vie 9:00-18:00, Sáb 9:00-14:00
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Dr. Ahchel Mancilla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="especialidades.html">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Servicios Médicos Especializados</h1>
+            <p>Ofrezco una amplia gama de servicios en traumatología y ortopedia con tecnología de vanguardia</p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Atención Médica Integral</h2>
+                <p>Desde la consulta inicial hasta la rehabilitación completa, brindo servicios especializados para tu pronta recuperación</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="main-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Consulta Especializada</h3>
+                        <p>Evaluación médica completa con historia clínica detallada, examen físico exhaustivo y análisis de estudios previos para un diagnóstico preciso.</p>
+                        <ul class="service-features">
+                            <li>Historia clínica completa</li>
+                            <li>Examen físico detallado</li>
+                            <li>Análisis de estudios de imagen</li>
+                            <li>Plan de tratamiento personalizado</li>
+                            <li>Segunda opinión médica</li>
+                        </ul>
+                        <div class="service-price">
+                            <div class="price-text">Desde $1,200 MXN</div>
+                            <button class="btn-service">Agendar Consulta</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3>Cirugía Ortopédica</h3>
+                        <p>Procedimientos quirúrgicos especializados utilizando técnicas mínimamente invasivas y tecnología de vanguardia para mejores resultados.</p>
+                        <ul class="service-features">
+                            <li>Cirugía artroscópica</li>
+                            <li>Osteosíntesis de fracturas</li>
+                            <li>Cirugía de ligamentos</li>
+                            <li>Corrección de deformidades</li>
+                            <li>Técnicas mínimamente invasivas</li>
+                        </ul>
+                        <div class="service-price">
+                            <div class="price-text">Cotización personalizada</div>
+                            <button class="btn-service">Solicitar Información</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h3>Medicina Deportiva</h3>
+                        <p>Atención especializada para atletas y personas activas, incluyendo prevención, tratamiento y rehabilitación de lesiones deportivas.</p>
+                        <ul class="service-features">
+                            <li>Evaluación biomecánica</li>
+                            <li>Tratamiento de lesiones agudas</li>
+                            <li>Infiltraciones especializadas</li>
+                            <li>Programas de prevención</li>
+                            <li>Retorno al deporte</li>
+                        </ul>
+                        <div class="service-price">
+                            <div class="price-text">Desde $1,500 MXN</div>
+                            <button class="btn-service">Consultar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <h3>Tratamiento de Fracturas</h3>
+                        <p>Manejo integral de fracturas simples y complejas con las técnicas más avanzadas de reducción y fijación.</p>
+                        <ul class="service-features">
+                            <li>Reducción cerrada y abierta</li>
+                            <li>Fijación interna y externa</li>
+                            <li>Injertos óseos</li>
+                            <li>Seguimiento radiológico</li>
+                            <li>Rehabilitación temprana</li>
+                        </ul>
+                        <div class="service-price">
+                            <div class="price-text">Según complejidad</div>
+                            <button class="btn-service">Evaluación Urgente</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Rehabilitación Integral</h3>
+                        <p>Programas personalizados de rehabilitación física y funcional para una recuperación completa y efectiva.</p>
+                        <ul class="service-features">
+                            <li>Fisioterapia especializada</li>
+                            <li>Ejercicios terapéuticos</li>
+                            <li>Reeducación funcional</li>
+                            <li>Programas de fortalecimiento</li>
+                            <li>Seguimiento continuo</li>
+                        </ul>
+                        <div class="service-price">
+                            <div class="price-text">Paquetes disponibles</div>
+                            <button class="btn-service">Ver Programas</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <h3>Estudios Diagnósticos</h3>
+                        <p>Interpretación especializada de estudios de imagen y procedimientos diagnósticos para un diagnóstico preciso.</p>
+                        <ul class="service-features">
+                            <li>Interpretación de rayos X</li>
+                            <li>Análisis de resonancias</li>
+                            <li>Ultrasonido musculoesquelético</li>
+                            <li>Tomografías especializadas</li>
+                            <li>Estudios de laboratorio</li>
+                        </ul>
+                        <div class="service-price">
+                            <div class="price-text">Desde $800 MXN</div>
+                            <button class="btn-service">Solicitar Estudio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="detailed-services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Servicios Detallados</h2>
+                <p>Conoce en profundidad cada uno de nuestros servicios especializados</p>
+            </div>
+            
+            <div class="service-detail">
+                <h3><i class="fas fa-stethoscope"></i>Consulta de Primera Vez</h3>
+                <div class="service-content">
+                    <div class="service-description">
+                        <p>La consulta de primera vez es el primer paso hacia tu recuperación. Durante esta cita, realizo una evaluación médica completa que incluye una historia clínica detallada, examen físico exhaustivo y análisis de cualquier estudio previo que tengas.</p>
+                        <p>Mi objetivo es entender completamente tu condición, los síntomas que experimentas, y cómo estos afectan tu vida diaria. Basándome en esta información, desarrollo un plan de tratamiento personalizado que se adapte a tus necesidades específicas y objetivos de recuperación.</p>
+                    </div>
+                    <div class="service-benefits">
+                        <h5>¿Qué incluye?</h5>
+                        <ul>
+                            <li>Historia clínica completa (60 minutos)</li>
+                            <li>Examen físico especializado</li>
+                            <li>Análisis de estudios previos</li>
+                            <li>Diagnóstico provisional</li>
+                            <li>Plan de tratamiento inicial</li>
+                            <li>Solicitud de estudios complementarios</li>
+                            <li>Recomendaciones inmediatas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-detail">
+                <h3><i class="fas fa-microscope"></i>Cirugía Artroscópica</h3>
+                <div class="service-content">
+                    <div class="service-description">
+                        <p>La cirugía artroscópica es una técnica mínimamente invasiva que me permite diagnosticar y tratar problemas articulares a través de pequeñas incisiones. Utilizo un artroscopio (cámara pequeña) para visualizar el interior de la articulación y realizar el procedimiento quirúrgico necesario.</p>
+                        <p>Esta técnica ofrece múltiples ventajas: menor dolor postoperatorio, recuperación más rápida, menor riesgo de infección y cicatrices más pequeñas. Es especialmente efectiva para problemas de rodilla, hombro, tobillo y cadera.</p>
+                    </div>
+                    <div class="service-benefits">
+                        <h5>Procedimientos que realizo:</h5>
+                        <ul>
+                            <li>Reparación de meniscos</li>
+                            <li>Reconstrucción de ligamentos</li>
+                            <li>Limpieza articular</li>
+                            <li>Reparación del manguito rotador</li>
+                            <li>Tratamiento de lesiones de cartílago</li>
+                            <li>Liberación de adherencias</li>
+                            <li>Extracción de cuerpos libres</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-detail">
+                <h3><i class="fas fa-heartbeat"></i>Medicina Deportiva Avanzada</h3>
+                <div class="service-content">
+                    <div class="service-description">
+                        <p>Mi enfoque en medicina deportiva va más allá del tratamiento de lesiones. Trabajo con atletas de todos los niveles para optimizar su rendimiento, prevenir lesiones y garantizar un retorno seguro al deporte después de cualquier lesión.</p>
+                        <p>Utilizo técnicas de evaluación biomecánica avanzada, análisis de movimiento y protocolos de rehabilitación específicos para cada deporte. Mi objetivo es no solo que regreses a tu actividad, sino que lo hagas mejor que antes.</p>
+                    </div>
+                    <div class="service-benefits">
+                        <h5>Especialidades deportivas:</h5>
+                        <ul>
+                            <li>Fútbol y deportes de contacto</li>
+                            <li>Running y atletismo</li>
+                            <li>Tenis y deportes de raqueta</li>
+                            <li>Básquetbol y deportes de salto</li>
+                            <li>Ciclismo y triatlón</li>
+                            <li>Natación y deportes acuáticos</li>
+                            <li>Artes marciales y boxeo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Proceso de Atención</h2>
+                <p style="color: rgba(255,255,255,0.9);">Un enfoque sistemático para garantizar los mejores resultados en tu tratamiento</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Evaluación Inicial</h4>
+                    <p>Consulta completa con historia clínica detallada, examen físico y análisis de estudios previos para establecer un diagnóstico preciso.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Diagnóstico</h4>
+                    <p>Solicitud de estudios complementarios si es necesario (rayos X, resonancia, ultrasonido) para confirmar el diagnóstico.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Plan de Tratamiento</h4>
+                    <p>Desarrollo de un plan terapéutico personalizado que puede incluir tratamiento conservador, fisioterapia o cirugía según sea necesario.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Tratamiento</h4>
+                    <p>Implementación del tratamiento elegido con seguimiento continuo para monitorear el progreso y ajustar según sea necesario.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4>Rehabilitación</h4>
+                    <p>Programa de rehabilitación integral diseñado para restaurar la función completa y prevenir futuras lesiones.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h4>Seguimiento</h4>
+                    <p>Monitoreo continuo del progreso con citas de seguimiento programadas para asegurar una recuperación completa y exitosa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para Comenzar tu Tratamiento?</h2>
+                <p>No dejes que el dolor limite tu vida. Agenda tu consulta hoy mismo y comienza el camino hacia una recuperación completa.</p>
+                
+                <div class="cta-buttons">
+                    <a href="tel:+525555123456" class="btn-cta btn-cta-primary">
+                        <i class="fas fa-phone"></i>
+                        Llamar Ahora
+                    </a>
+                    <a href="https://wa.me/525555123456" class="btn-cta btn-cta-secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                    <a href="contacto.html" class="btn-cta btn-cta-secondary">
+                        <i class="fas fa-calendar-alt"></i>
+                        Agendar Cita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Dr. Ahchel Mancilla</h5>
+                    <p>Especialista en Traumatología y Ortopedia comprometido con brindar la mejor atención médica a mis pacientes. Utilizando tecnología de vanguardia y técnicas mínimamente invasivas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Servicios</h5>
+                    <ul>
+                        <li><a href="#servicios">Consulta</a></li>
+                        <li><a href="#servicios">Cirugía</a></li>
+                        <li><a href="#servicios">Medicina Deportiva</a></li>
+                        <li><a href="#servicios">Rehabilitación</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Especialidades</h5>
+                    <ul>
+                        <li><a href="especialidades.html">Lesiones Deportivas</a></li>
+                        <li><a href="especialidades.html">Fracturas</a></li>
+                        <li><a href="especialidades.html">Artroscopía</a></li>
+                        <li><a href="especialidades.html">Cirugía de Columna</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Av. Revolución 1234<br>Ciudad de México</p>
+                    <p><i class="fas fa-phone me-2"></i>+52 55 5512 3456</p>
+                    <p><i class="fas fa-envelope me-2"></i>contacto@drahchelmancilla.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Ahchel Mancilla Hernández. Todos los derechos reservados. | Diseño web médico profesional</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Service cards animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards for animation
+        document.querySelectorAll('.service-card, .service-detail, .process-step').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Service buttons functionality
+        document.querySelectorAll('.btn-service').forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceName = this.closest('.service-card').querySelector('h3').textContent;
+                const message = `Hola, me interesa agendar una cita para ${serviceName}. ¿Podrían darme más información?`;
+                const whatsappUrl = `https://wa.me/525555123456?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+
+        // Process steps animation
+        document.querySelectorAll('.process-step').forEach((step, index) => {
+            step.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Service card hover effects
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Dr. Ahchel Mancilla Hernández - Servicios de Traumatología",
+        "description": "Servicios especializados en traumatología y ortopedia: consultas, cirugía artroscópica, medicina deportiva, tratamiento de fracturas y rehabilitación integral",
+        "url": "https://www.drahchelmancilla.com/servicios",
+        "telephone": "+525555123456",
+        "email": "contacto@drahchelmancilla.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Revolución 1234, Col. San Ángel",
+            "addressLocality": "Ciudad de México",
+            "addressRegion": "CDMX",
+            "postalCode": "01000",
+            "addressCountry": "MX"
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-18:00",
+            "Sa 09:00-14:00"
+        ],
+        "priceRange": "$",
+        "medicalSpecialty": [
+            "Traumatología",
+            "Ortopedia",
+            "Medicina Deportiva",
+            "Cirugía Ortopédica"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios Médicos",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Consulta Especializada",
+                        "description": "Evaluación médica completa con diagnóstico y plan de tratamiento"
+                    },
+                    "price": "1200",
+                    "priceCurrency": "MXN"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Cirugía Artroscópica",
+                        "description": "Procedimientos quirúrgicos mínimamente invasivos"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Medicina Deportiva",
+                        "description": "Tratamiento especializado de lesiones deportivas"
+                    },
+                    "price": "1500",
+                    "priceCurrency": "MXN"
+                }
+            ]
+        }
+    }
+    </script>
+</body>
+</html>

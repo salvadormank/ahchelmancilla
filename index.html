@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Ahchel Mancilla Hernández - Traumatólogo especialista en cirugía ortopédica, lesiones deportivas y fracturas. Atención médica de calidad en Ciudad de México. Agenda tu cita.">
+    <meta name="keywords" content="traumatólogo, ortopedia, cirugía ortopédica, lesiones deportivas, fracturas, rehabilitación, Ciudad de México, Dr Ahchel Mancilla">
+    <meta name="author" content="Dr. Ahchel Mancilla Hernández - Traumatólogo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dr. Ahchel Mancilla Hernández - Traumatólogo Especialista">
+    <meta property="og:description" content="Especialista en traumatología y ortopedia. Tratamiento integral de lesiones deportivas, fracturas y cirugía ortopédica.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.drahchelmancilla.com">
+    
+    <title>Dr. Ahchel Mancilla Hernández - Traumatólogo Especialista | Cirugía Ortopédica y Lesiones Deportivas</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a5568;
+            --secondary-color: #2d3748;
+            --accent-color: #718096;
+            --light-bg: #f7fafc;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+            --medical-green: #68d391;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+        
+        /* Header */
+        .header-top {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        
+        .header-top a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .header-top i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--text-dark) !important;
+            margin: 0 15px;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(45,55,72,0.85), rgba(45,55,72,0.85)), url('https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        
+        .btn-primary-custom {
+            background: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+            padding: 10px 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+        
+        /* Doctor Profile Section */
+        .doctor-profile {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .doctor-image {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .doctor-image img {
+            max-width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .doctor-info h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .doctor-info .subtitle {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        
+        .doctor-info p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        
+        .credentials {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .credentials h4 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .credentials ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .credentials li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .credentials li:last-child {
+            border-bottom: none;
+        }
+        
+        .credentials i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .contact-info {
+            background: var(--primary-color);
+            color: white;
+            padding: 50px 40px;
+            border-radius: 10px;
+            height: 100%;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-right: 15px;
+            width: 30px;
+        }
+        
+        .contact-item div h5 {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .contact-item div p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .contact-form {
+            background: var(--light-bg);
+            padding: 50px 40px;
+            border-radius: 10px;
+        }
+        
+        .contact-form h3 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .form-control {
+            border: 2px solid #e9ecef;
+            padding: 12px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            box-shadow: none;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer h5 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer p, .footer li {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .doctor-info h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .navbar-nav .nav-link {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-phone"></i><a href="tel:+525555123456">+52 55 5512 3456</a>
+                    <span class="ms-3"><i class="fas fa-envelope"></i><a href="mailto:contacto@drahchelmancilla.com">contacto@drahchelmancilla.com</a></span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <i class="fas fa-clock"></i>Horarios: Lun-Vie 9:00-18:00, Sáb 9:00-14:00
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">Dr. Ahchel Mancilla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#especialidades">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Especialista en Traumatología y Ortopedia</h1>
+                    <p>Con más de 15 años de experiencia en el tratamiento de lesiones deportivas, fracturas y cirugía ortopédica. Comprometido con brindar la mejor atención médica para tu pronta recuperación.</p>
+                    <a href="#contacto" class="btn btn-primary-custom btn-lg">Agendar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Profile Section -->
+    <section class="doctor-profile" id="sobre-mi">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="doctor-image">
+                        <img src="ahchel.jpeg" alt="Dr. Ahchel Mancilla Hernández - Traumatólogo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="doctor-info">
+                        <h2>Dr. Ahchel Mancilla Hernández</h2>
+                        <p class="subtitle">Traumatólogo y Ortopedista Certificado</p>
+                        
+                        <p>Soy un médico especialista en traumatología y ortopedia con más de 15 años de experiencia dedicados al cuidado integral de mis pacientes. Mi formación incluye especialización en medicina deportiva y técnicas quirúrgicas mínimamente invasivas.</p>
+                        
+                        <p>Me he especializado en el tratamiento de lesiones deportivas, fracturas complejas, y cirugía artroscópica. Mi enfoque se centra en brindar un tratamiento personalizado, utilizando las técnicas más avanzadas para garantizar una recuperación óptima.</p>
+                        
+                        <p>Creo firmemente en la medicina basada en evidencia y en la importancia de mantenerme actualizado con los últimos avances en traumatología y ortopedia para ofrecer a mis pacientes las mejores opciones de tratamiento.</p>
+                        
+                        <div class="credentials">
+                            <h4>Formación y Certificaciones</h4>
+                            <ul>
+                                <li><i class="fas fa-graduation-cap"></i>Médico Cirujano - Universidad Nacional Autónoma de México</li>
+                                <li><i class="fas fa-certificate"></i>Especialidad en Traumatología y Ortopedia - Hospital General de México</li>
+                                <li><i class="fas fa-award"></i>Fellowship en Medicina Deportiva - Instituto Nacional de Rehabilitación</li>
+                                <li><i class="fas fa-user-md"></i>Certificado por el Consejo Mexicano de Ortopedia y Traumatología</li>
+                                <li><i class="fas fa-microscope"></i>Curso de Artroscopía Avanzada - Hospital de Especialidades CMN Siglo XXI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Servicios Médicos</h2>
+                <p>Ofrezco una amplia gama de servicios especializados en traumatología y ortopedia, desde consultas diagnósticas hasta procedimientos quirúrgicos complejos.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Consulta Especializada</h4>
+                        <p>Evaluación completa y diagnóstico preciso de lesiones musculoesqueléticas con el apoyo de estudios de imagen avanzados.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h4>Cirugía Ortopédica</h4>
+                        <p>Procedimientos quirúrgicos especializados incluyendo cirugía artroscópica y técnicas mínimamente invasivas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h4>Medicina Deportiva</h4>
+                        <p>Tratamiento especializado de lesiones deportivas y programas de prevención para atletas de todos los niveles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <h4>Tratamiento de Fracturas</h4>
+                        <p>Manejo integral de fracturas simples y complejas con técnicas de reducción y fijación avanzadas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h4>Rehabilitación</h4>
+                        <p>Programas personalizados de rehabilitación y fisioterapia para una recuperación completa y efectiva.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <h4>Estudios Diagnósticos</h4>
+                        <p>Interpretación de estudios de imagen y estudios especializados para un diagnóstico preciso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto y Ubicación</h2>
+                <p>Agenda tu cita o ponte en contacto conmigo para cualquier consulta sobre traumatología y ortopedia.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Dirección</h5>
+                                <p>Av. Revolución 1234, Col. San Ángel<br>Ciudad de México, CP 01000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h5>Teléfono</h5>
+                                <p>+52 55 5512 3456<br>+52 55 5512 3457</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>contacto@drahchelmancilla.com<br>citas@drahchelmancilla.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h5>Horarios de Atención</h5>
+                                <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 14:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h5>WhatsApp</h5>
+                                <p><a href="https://wa.me/525555123456" target="_blank" style="color: white;">+52 55 5512 3456</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h3>Solicita tu Cita</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nombre completo" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Teléfono" required>
+                                </div>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                            <select class="form-control" required>
+                                <option value="">Selecciona el tipo de consulta</option>
+                                <option value="primera-vez">Primera vez</option>
+                                <option value="seguimiento">Seguimiento</option>
+                                <option value="segunda-opinion">Segunda opinión</option>
+                                <option value="urgencia">Urgencia</option>
+                            </select>
+                            <textarea class="form-control" rows="4" placeholder="Describe brevemente tu consulta o motivo de la cita"></textarea>
+                            <button type="submit" class="btn btn-primary-custom btn-lg w-100">Enviar Solicitud</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Dr. Ahchel Mancilla</h5>
+                    <p>Especialista en Traumatología y Ortopedia comprometido con brindar la mejor atención médica a mis pacientes. Utilizando tecnología de vanguardia y técnicas mínimamente invasivas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Servicios</h5>
+                    <ul>
+                        <li><a href="#servicios">Consulta</a></li>
+                        <li><a href="#servicios">Cirugía</a></li>
+                        <li><a href="#servicios">Medicina Deportiva</a></li>
+                        <li><a href="#servicios">Rehabilitación</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Especialidades</h5>
+                    <ul>
+                        <li><a href="#">Lesiones Deportivas</a></li>
+                        <li><a href="#">Fracturas</a></li>
+                        <li><a href="#">Artroscopía</a></li>
+                        <li><a href="#">Cirugía de Columna</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Av. Revolución 1234<br>Ciudad de México</p>
+                    <p><i class="fas fa-phone me-2"></i>+52 55 5512 3456</p>
+                    <p><i class="fas fa-envelope me-2"></i>contacto@drahchelmancilla.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Ahchel Mancilla Hernández. Todos los derechos reservados. | Diseño web médico profesional</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por tu solicitud. Te contactaremos pronto para confirmar tu cita.');
+        });
+    </script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Dr. Carlos Martínez - Traumatólogo",
+        "description": "Especialista en traumatología y ortopedia, medicina deportiva y cirugía ortopédica en Ciudad de México",
+        "url": "https://www.drcarlosmartinez.com",
+        "telephone": "+525555123456",
+        "email": "contacto@drcarlosmartinez.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Revolución 1234, Col. San Ángel",
+            "addressLocality": "Ciudad de México",
+            "addressRegion": "CDMX",
+            "postalCode": "01000",
+            "addressCountry": "MX"
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-18:00",
+            "Sa 09:00-14:00"
+        ],
+        "priceRange": "$",
+        "medicalSpecialty": [
+            "Traumatología",
+            "Ortopedia",
+            "Medicina Deportiva",
+            "Cirugía Ortopédica"
+        ],
+        "physician": {
+            "@type": "Physician",
+            "name": "Dr. Carlos Martínez González",
+            "medicalSpecialty": [
+                "Traumatología",
+                "Ortopedia"
+            ],
+            "alumniOf": [
+                "Universidad Nacional Autónoma de México",
+                "Hospital General de México"
+            ]
+        }
+    }
+    </script>
+</body>
+</html>
